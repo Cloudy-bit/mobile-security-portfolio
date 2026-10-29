@@ -1,0 +1,1 @@
+The tests create synthetic APK-shaped ZIPs with plain XML manifests/configs. These are test fixtures, not real app scan results. For production APKs with binary XML/resources, decode them using Android build tools before analysis; this tool clearly reports parse limitations.\n

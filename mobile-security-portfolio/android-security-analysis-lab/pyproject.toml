@@ -1,0 +1,25 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-security-analysis-lab"
+version = "1.0.0"
+description = "Defensive static Android APK manifest configuration review"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+apk = ["androguard>=4.1.2"]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+android-security-lab = "android_security_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["android_security_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

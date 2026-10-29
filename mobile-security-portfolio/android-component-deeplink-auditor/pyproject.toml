@@ -1,0 +1,25 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-component-deeplink-auditor"
+version = "1.0.0"
+description = "Static Android component and deep-link manifest auditor"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+apk = ["androguard>=4.1.2"]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+component-deeplink-auditor = "component_auditor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["component_auditor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://api.example.test/v1/profile",
+    "method": "GET",
+    "label": "replace with an authorized test endpoint"
+  },
+  {
+    "url": "https://api.example.test/v1/orders",
+    "method": "GET",
+    "label": "replace with an authorized test endpoint"
+  }
+]

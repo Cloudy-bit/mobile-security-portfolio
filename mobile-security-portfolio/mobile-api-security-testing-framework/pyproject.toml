@@ -1,0 +1,24 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobile-api-security-testing-framework"
+version = "1.0.0"
+description = "Defensive mobile API endpoint review and limited safe response checks"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+mobile-api-audit = "mobile_api_audit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mobile_api_audit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
